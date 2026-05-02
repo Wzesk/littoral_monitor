@@ -1,0 +1,390 @@
+/* ============================================================
+   Coastal Assembly — Colors & Type
+   ------------------------------------------------------------
+   Two-mode system:
+   - Marketing surfaces (splash, taglines): white-on-dark, video
+     backdrop, shimmer-mask animations.
+   - Product surfaces (littoral app): light-on-light panel UI
+     paired with dark satellite imagery.
+
+   Typography is single-family — Barlow — exercised across many
+   weights (100–900) with a strong preference for the lighter
+   end (100–300). Nothing is bold by default.
+   ============================================================ */
+
+/* ---------- Webfont (Barlow family — self-hosted) ---------------
+   Three families ship with the brand:
+     • "Barlow"               — default
+     • "Barlow Condensed"
+     • "Barlow Semi Condensed"
+   Each in 9 weights × roman+italic. Files live in /fonts/. */
+
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 100; font-display: swap; src: url("fonts/Barlow-Thin.woff2")        format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: italic; font-weight: 100; font-display: swap; src: url("fonts/Barlow-ThinItalic.woff2")  format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 200; font-display: swap; src: url("fonts/Barlow-ExtraLight.woff2")  format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: italic; font-weight: 200; font-display: swap; src: url("fonts/Barlow-ExtraLightItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 300; font-display: swap; src: url("fonts/Barlow-Light.woff2")       format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: italic; font-weight: 300; font-display: swap; src: url("fonts/Barlow-LightItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/Barlow-Regular.woff2")     format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/Barlow-Italic.woff2")      format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/Barlow-Medium.woff2")      format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: italic; font-weight: 500; font-display: swap; src: url("fonts/Barlow-MediumItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/Barlow-SemiBold.woff2")    format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: italic; font-weight: 600; font-display: swap; src: url("fonts/Barlow-SemiBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/Barlow-Bold.woff2")        format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: italic; font-weight: 700; font-display: swap; src: url("fonts/Barlow-BoldItalic.woff2")  format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 800; font-display: swap; src: url("fonts/Barlow-ExtraBold.woff2")   format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: italic; font-weight: 800; font-display: swap; src: url("fonts/Barlow-ExtraBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: normal; font-weight: 900; font-display: swap; src: url("fonts/Barlow-Black.woff2")       format("woff2"); }
+@font-face { font-family: "Barlow"; font-style: italic; font-weight: 900; font-display: swap; src: url("fonts/Barlow-BlackItalic.woff2") format("woff2"); }
+
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 100; font-display: swap; src: url("fonts/BarlowCondensed-Thin.woff2")        format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: italic; font-weight: 100; font-display: swap; src: url("fonts/BarlowCondensed-ThinItalic.woff2")  format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 200; font-display: swap; src: url("fonts/BarlowCondensed-ExtraLight.woff2")  format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: italic; font-weight: 200; font-display: swap; src: url("fonts/BarlowCondensed-ExtraLightItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 300; font-display: swap; src: url("fonts/BarlowCondensed-Light.woff2")       format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: italic; font-weight: 300; font-display: swap; src: url("fonts/BarlowCondensed-LightItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/BarlowCondensed-Regular.woff2")     format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/BarlowCondensed-Italic.woff2")      format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/BarlowCondensed-Medium.woff2")      format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: italic; font-weight: 500; font-display: swap; src: url("fonts/BarlowCondensed-MediumItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/BarlowCondensed-SemiBold.woff2")    format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: italic; font-weight: 600; font-display: swap; src: url("fonts/BarlowCondensed-SemiBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/BarlowCondensed-Bold.woff2")        format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: italic; font-weight: 700; font-display: swap; src: url("fonts/BarlowCondensed-BoldItalic.woff2")  format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 800; font-display: swap; src: url("fonts/BarlowCondensed-ExtraBold.woff2")   format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: italic; font-weight: 800; font-display: swap; src: url("fonts/BarlowCondensed-ExtraBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 900; font-display: swap; src: url("fonts/BarlowCondensed-Black.woff2")       format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-style: italic; font-weight: 900; font-display: swap; src: url("fonts/BarlowCondensed-BlackItalic.woff2") format("woff2"); }
+
+@font-face { font-family: "Barlow Semi Condensed"; font-style: normal; font-weight: 100; font-display: swap; src: url("fonts/BarlowSemiCondensed-Thin.woff2")        format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: italic; font-weight: 100; font-display: swap; src: url("fonts/BarlowSemiCondensed-ThinItalic.woff2")  format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: normal; font-weight: 200; font-display: swap; src: url("fonts/BarlowSemiCondensed-ExtraLight.woff2")  format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: italic; font-weight: 200; font-display: swap; src: url("fonts/BarlowSemiCondensed-ExtraLightItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: normal; font-weight: 300; font-display: swap; src: url("fonts/BarlowSemiCondensed-Light.woff2")       format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: italic; font-weight: 300; font-display: swap; src: url("fonts/BarlowSemiCondensed-LightItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/BarlowSemiCondensed-Regular.woff2")     format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/BarlowSemiCondensed-Italic.woff2")      format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/BarlowSemiCondensed-Medium.woff2")      format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: italic; font-weight: 500; font-display: swap; src: url("fonts/BarlowSemiCondensed-MediumItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/BarlowSemiCondensed-SemiBold.woff2")    format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: italic; font-weight: 600; font-display: swap; src: url("fonts/BarlowSemiCondensed-SemiBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/BarlowSemiCondensed-Bold.woff2")        format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: italic; font-weight: 700; font-display: swap; src: url("fonts/BarlowSemiCondensed-BoldItalic.woff2")  format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: normal; font-weight: 800; font-display: swap; src: url("fonts/BarlowSemiCondensed-ExtraBold.woff2")   format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: italic; font-weight: 800; font-display: swap; src: url("fonts/BarlowSemiCondensed-ExtraBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: normal; font-weight: 900; font-display: swap; src: url("fonts/BarlowSemiCondensed-Black.woff2")       format("woff2"); }
+@font-face { font-family: "Barlow Semi Condensed"; font-style: italic; font-weight: 900; font-display: swap; src: url("fonts/BarlowSemiCondensed-BlackItalic.woff2") format("woff2"); }
+
+:root {
+  /* ----------------------------------------------------------
+     COLOR — Brand
+     ---------------------------------------------------------- */
+
+  /* Mono — the entire splash site lives here */
+  --ca-ink:            #000000;          /* hard black, body + logo */
+  --ca-ink-soft:       rgba(0,0,0,0.7);
+  --ca-ink-mute:       rgba(0,0,0,0.4);
+  --ca-paper:          #ffffff;          /* pure white */
+  --ca-paper-soft:     #fafafa;
+  --ca-line:           rgba(0,0,0,0.12); /* hairlines on paper */
+  --ca-line-strong:    rgba(0,0,0,0.2);
+
+  /* Brand teal — pulled from the splash CTA buttons
+     (rgba(14,83,97,.15)). The full-saturation version is used
+     for active markers / focus rings in the littoral app. */
+  --ca-teal-900:       #0e5361;          /* button tint base */
+  --ca-teal-700:       #0d7490;
+  --ca-teal-500:       #1aa1be;          /* primary accent */
+  --ca-teal-300:       #6cc5d6;
+  --ca-teal-100:       #d4eef4;
+  --ca-teal-tint-15:   rgba(14, 83, 97, 0.15);  /* exact splash CTA fill */
+
+  /* Satellite palette — derived from the littoral overlays.
+     Cool deep blues for sea/imagery, warm reds for erosion
+     loss, oranges for accretion / current year. */
+  --ca-sea-deep:       #0a1628;          /* "ocean" panel bg */
+  --ca-sea-mid:        #122844;
+  --ca-sea-night:      #050b16;          /* near-black, image bg */
+  --ca-erosion:        #ff3b46;          /* loss / 2023 */
+  --ca-erosion-soft:   rgba(255, 59, 70, 0.55);
+  --ca-accretion:      #ffb547;          /* gain / 2018 */
+  --ca-accretion-soft: rgba(255, 181, 71, 0.55);
+  --ca-cyan-marker:    #19d4e6;          /* shoreline edge */
+  --ca-present:        #ff8a3d;          /* "present" highlight band */
+
+  /* On-water UI — translucent capsules used over imagery */
+  --ca-capsule-bg:     rgba(255,255,255,0.92);
+  --ca-capsule-bg-dark:rgba(0,0,0,0.55);
+  --ca-overlay-veil:   rgba(0,0,0,0.30); /* the splash dim layer */
+  --ca-overlay-veil-strong: rgba(0,0,0,0.60);
+
+  /* ----------------------------------------------------------
+     COLOR — Semantic (light surface, e.g. littoral panel)
+     ---------------------------------------------------------- */
+  --bg:                var(--ca-paper);
+  --bg-elevated:       var(--ca-paper-soft);
+  --bg-image:          var(--ca-sea-night);   /* dark map canvas */
+  --fg:                #1a1a1a;               /* ~oklch(.20 0 0) */
+  --fg-muted:          #5a5a5a;               /* ~oklch(.50 0 0) */
+  --fg-soft:           #8a8a8a;               /* table headers   */
+  --border:            rgba(0,0,0,0.10);
+  --border-strong:     rgba(0,0,0,0.18);
+  --focus-ring:        var(--ca-teal-500);
+
+  /* Status (data-vis primary) */
+  --data-loss:         var(--ca-erosion);
+  --data-gain:         var(--ca-accretion);
+  --data-edge:         var(--ca-cyan-marker);
+  --data-present:      var(--ca-present);
+
+  /* ----------------------------------------------------------
+     TYPE — base
+     ---------------------------------------------------------- */
+  --font-sans:        "Barlow", ui-sans-serif, -apple-system, "Segoe UI",
+                      Roboto, Helvetica, Arial, sans-serif;
+  --font-condensed:   "Barlow Condensed", "Barlow", ui-sans-serif, sans-serif;
+  --font-semi-condensed: "Barlow Semi Condensed", "Barlow", ui-sans-serif, sans-serif;
+  --font-mono: "Barlow", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --weight-thin:       100;
+  --weight-extralight: 200;
+  --weight-light:      300;
+  --weight-regular:    400;
+  --weight-medium:     500;
+  --weight-semibold:   600;
+
+  --tracking-tight:   -0.01em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.08em;
+  --tracking-widest:   0.18em;   /* the splash CTA letter-spacing */
+
+  --leading-tight:     1.1;
+  --leading-snug:      1.25;
+  --leading-normal:    1.5;
+  --leading-loose:     1.7;
+
+  /* ----------------------------------------------------------
+     SPACING / RADII / ELEVATION
+     ---------------------------------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Coastal Assembly is a "sharp corners" brand. The splash uses
+     `rounded-none` aggressively. We expose a tiny radius for the
+     littoral app's input fields only. */
+  --radius-none: 0;
+  --radius-xs:   2px;            /* date pickers, table chips */
+  --radius-sm:   4px;            /* form inputs in app */
+  --radius-pill: 999px;
+
+  /* Shadows — soft & wide; splash uses shadow-2xl on the
+     paper panel + inputs over imagery. */
+  --shadow-card:     0 1px 2px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-overlay:  0 25px 50px -12px rgba(0,0,0,0.25);  /* tw shadow-2xl */
+  --shadow-button:   0 1px 2px rgba(0,0,0,0.05);
+  --shadow-inset:    inset 0 0 0 1px rgba(255,255,255,0.04);
+
+  /* Layout */
+  --header-h:        80px;
+  --container-max:   1280px;
+
+  /* Motion */
+  --ease-out:        cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out:     cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:        200ms;
+  --dur-mid:         600ms;
+  --dur-slow:        1000ms;     /* splash crossfades */
+  --dur-shimmer:     6s;         /* logo + tagline shimmer */
+}
+
+/* ============================================================
+   Semantic type — element-level rules
+   ============================================================ */
+html { font-family: var(--font-sans); color: var(--fg); }
+body { font-family: var(--font-sans); font-weight: var(--weight-light); }
+
+/* ----- Display: marketing splash hero. Logo image carries it
+   visually; the text "display" treatment is for big mission
+   statement / page-takeover headlines on light surfaces. */
+.ca-display,
+h1.ca-display {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-thin);     /* 100 */
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-transform: lowercase;            /* brand voice */
+}
+
+/* ----- H1 — section titles inside a paper panel */
+h1, .ca-h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-light);
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-5);
+}
+
+/* ----- H2 — used for app titles ("littoral") and big-quote slides */
+h2, .ca-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-light);
+  font-size: clamp(24px, 2.5vw, 36px);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-normal);
+  margin: 0 0 var(--space-4);
+}
+
+/* ----- H3 — small section headers, modal titles */
+h3, .ca-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-extralight); /* 200 — modal h2 in splash code */
+  font-size: 24px;
+  line-height: var(--leading-snug);
+  margin: 0 0 var(--space-4);
+}
+
+/* ----- Lead — tagline subhead / mission paragraph */
+.ca-lead {
+  font-weight: var(--weight-medium);
+  font-size: clamp(16px, 1.4vw, 22px);
+  line-height: var(--leading-snug);
+}
+
+/* ----- Body — long-form paragraph (the description modal) */
+p, .ca-body {
+  font-weight: var(--weight-extralight);   /* 200 — splash uses font-extralight */
+  font-size: 16px;
+  line-height: var(--leading-loose);
+  text-wrap: pretty;
+}
+
+/* ----- Eyebrow / tagline — small italic above-the-fold strap */
+.ca-eyebrow {
+  font-style: italic;
+  font-weight: var(--weight-thin);         /* 100 — subhead in tagline */
+  font-size: 14px;
+  letter-spacing: var(--tracking-normal);
+}
+.ca-eyebrow > strong {
+  font-weight: var(--weight-regular);
+  font-style: italic;
+}
+
+/* ----- CTA — splash "learn more" / "reserve access" */
+.ca-cta {
+  font-weight: var(--weight-light);
+  font-size: 20px;
+  letter-spacing: var(--tracking-widest);  /* the brand's signature spacing */
+  text-transform: lowercase;
+}
+
+/* ----- UI — app labels, table headers, status pills */
+.ca-ui {
+  font-weight: var(--weight-regular);
+  font-size: 13px;
+  line-height: var(--leading-normal);
+}
+.ca-ui-sm {
+  font-weight: var(--weight-regular);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* ----- Mono — Barlow at tabular-nums for data tables */
+.ca-mono, table {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   Brand utility classes
+   ============================================================ */
+
+/* Lowercase by default — Coastal Assembly prefers all-lowercase
+   in marketing voice; reserve sentence-case for app data. */
+.ca-lower { text-transform: lowercase; }
+
+/* The signature shimmer — a horizontal mask sweep used on the
+   logo and tagline body. Drop on any element. */
+@keyframes ca-shimmer {
+  from { background-position: 0% center; }
+  to   { background-position: 200% center; }
+}
+.ca-shimmer-text {
+  background: linear-gradient(to right, #fff, rgba(255,255,255,0.4), #fff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: ca-shimmer var(--dur-shimmer) linear infinite;
+}
+
+@keyframes ca-logo-shimmer {
+  from { -webkit-mask-position: 0% center;   mask-position: 0% center; }
+  to   { -webkit-mask-position: 200% center; mask-position: 200% center; }
+}
+.ca-shimmer-mask {
+  -webkit-mask-image: linear-gradient(to right, white, rgba(255,255,255,0.4), white);
+  mask-image:         linear-gradient(to right, white, rgba(255,255,255,0.4), white);
+  -webkit-mask-size: 200% auto;
+  mask-size: 200% auto;
+  animation: ca-logo-shimmer var(--dur-shimmer) linear infinite;
+}
+
+/* The splash's CTA — translucent teal fill, white hairline border, sharp corners. */
+.ca-button-glass {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 44px; padding: 0 18px;
+  background: var(--ca-teal-tint-15);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: var(--radius-none);
+  font: var(--weight-light) 20px/1 var(--font-sans);
+  letter-spacing: var(--tracking-widest);
+  text-transform: lowercase;
+  box-shadow: var(--shadow-overlay);
+  transition: background var(--dur-fast) var(--ease-out),
+              opacity   var(--dur-fast) var(--ease-out);
+  cursor: pointer;
+}
+.ca-button-glass:hover  { background: rgba(14, 83, 97, 0.30); }
+.ca-button-glass:active { opacity: 0.85; }
+
+/* The "ink" button — black fill on paper, used in modal forms. */
+.ca-button-ink {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 40px; padding: 0 16px;
+  background: var(--ca-ink); color: var(--ca-paper);
+  border: 0; border-radius: var(--radius-none);
+  font: var(--weight-regular) 14px/1 var(--font-sans);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.ca-button-ink:hover { background: #2a2a2a; }
+
+/* Capsule label used over imagery (year tags, scale chip) */
+.ca-capsule {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 24px; padding: 0 8px;
+  background: var(--ca-capsule-bg);
+  color: var(--ca-ink);
+  font: var(--weight-medium) 12px/1 var(--font-sans);
+  border-radius: var(--radius-xs);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+.ca-capsule--dark {
+  background: var(--ca-capsule-bg-dark);
+  color: var(--ca-paper);
+}
+.ca-capsule--erosion  { background: var(--ca-erosion);   color: #fff; }
+.ca-capsule--accretion{ background: var(--ca-accretion); color: #1a1a1a; }
+.ca-capsule--present  { background: var(--ca-present);   color: #1a1a1a; }
