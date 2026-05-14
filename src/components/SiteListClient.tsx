@@ -28,7 +28,7 @@ export default function SiteListClient() {
       </div>
 
       {/* Body */}
-      <div className="scroll" style={{ flex: 1, padding: '32px', overflowY: 'auto' }}>
+      <div className="scroll" style={{ flex: 1, minHeight: 0, padding: '32px', overflowY: 'auto' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <div className="kicker" style={{ marginBottom: 8 }}>monitored sites</div>
           <div style={{ font: '200 28px/1.2 var(--font-sans)', marginBottom: 6 }}>
