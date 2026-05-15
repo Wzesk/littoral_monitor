@@ -91,7 +91,7 @@ export default function SiteMap({ data, shorelines, overlays, onSelectShoreline 
   const mapboxToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN
   const tileUrl = mapboxToken
     ? `https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v12/tiles/{z}/{x}/{y}@2x?access_token=${mapboxToken}`
-    : 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+    : 'https://clarity.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 
   // Sample up to 40 evenly distributed shorelines + always include most recent
   const sampled = (() => {
@@ -122,7 +122,7 @@ export default function SiteMap({ data, shorelines, overlays, onSelectShoreline 
         tileSize={mapboxToken ? 512 : 256}
         zoomOffset={mapboxToken ? -1 : 0}
         maxZoom={22}
-        attribution='© Mapbox © OpenStreetMap'
+        attribution={mapboxToken ? '© Mapbox © OpenStreetMap' : '© Esri, Maxar, Earthstar Geographics'}
       />
 
       <FitBounds center={center} bounds={aoiBounds} />
